@@ -4,7 +4,8 @@ import org.alfresco.repo.lock.JobLockService;
 import org.alfresco.repo.transaction.RetryingTransactionHelper;
 import org.alfresco.service.cmr.attributes.AttributeService;
 import org.alfresco.service.namespace.QName;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.util.Assert;
 
@@ -16,7 +17,7 @@ import org.springframework.util.Assert;
  */
 public class AttributeNumberingStorageImpl implements NumberingStorage, InitializingBean {
 
-  private static final Logger LOG = Logger.getLogger(AttributeNumberingStorageImpl.class);
+  private static final Logger LOG = LoggerFactory.getLogger(AttributeNumberingStorageImpl.class);
 
   protected static long DEFAULT_LOCK_TTL = 30000L;
   protected ThreadLocal<String> lockThreadLocal = new ThreadLocal<String>();

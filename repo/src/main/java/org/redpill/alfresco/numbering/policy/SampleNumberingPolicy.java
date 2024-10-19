@@ -4,12 +4,13 @@ import org.alfresco.model.ContentModel;
 import org.alfresco.service.cmr.repository.NodeRef;
 import org.alfresco.service.namespace.NamespaceService;
 import org.alfresco.service.namespace.QName;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.InitializingBean;
 
 public class SampleNumberingPolicy extends AbstractNumberingPolicy implements InitializingBean {
 
-  private static final Logger LOG = Logger.getLogger(SampleNumberingPolicy.class);
+  private static final Logger LOG = LoggerFactory.getLogger(SampleNumberingPolicy.class);
 
   @Override
   protected boolean allowUpdate(final NodeRef nodeRef) {

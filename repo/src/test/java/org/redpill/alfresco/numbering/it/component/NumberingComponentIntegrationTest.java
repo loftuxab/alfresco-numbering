@@ -7,7 +7,7 @@ import org.alfresco.repo.security.authentication.AuthenticationUtil;
 import org.alfresco.service.cmr.model.FileInfo;
 import org.alfresco.service.cmr.repository.NodeRef;
 import org.alfresco.service.cmr.site.SiteInfo;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
 import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 import org.redpill.alfresco.numbering.component.NumberingComponent;
@@ -24,7 +24,7 @@ import org.springframework.test.annotation.Repeat;
  */
 public class NumberingComponentIntegrationTest extends AbstractRepoIntegrationTest {
 
-  private static final Logger LOG = Logger.getLogger(NumberingComponentIntegrationTest.class);
+  private static final Logger LOG = LoggerFactory.getLogger(NumberingComponentIntegrationTest.class);
 
   private static final String DEFAULT_USERNAME = "testuser_" + System.currentTimeMillis();
 

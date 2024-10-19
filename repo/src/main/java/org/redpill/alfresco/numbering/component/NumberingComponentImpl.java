@@ -12,12 +12,12 @@ import org.alfresco.service.cmr.repository.NodeRef;
 import org.alfresco.service.cmr.repository.NodeService;
 import org.alfresco.service.namespace.NamespaceService;
 import org.alfresco.service.namespace.QName;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
 import org.redpill.alfresco.numbering.decorator.Decorator;
 import org.redpill.alfresco.numbering.storage.NumberingStorage;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.util.Assert;
-
+import org.slf4j.LoggerFactory;
 /**
  * This component handles numbering of objects
  *
@@ -26,7 +26,7 @@ import org.springframework.util.Assert;
  */
 public class NumberingComponentImpl implements NumberingComponent, InitializingBean {
 
-  private static final Logger LOG = Logger.getLogger(NumberingComponentImpl.class);
+  private static final Logger LOG = LoggerFactory.getLogger(NumberingComponentImpl.class);
 
   protected Repository repositoryHelper;
   protected NodeService nodeService;

@@ -1,12 +1,9 @@
 package org.redpill.alfresco.numbering.policy;
 
-import java.io.Serializable;
-import java.util.Map;
 import org.alfresco.model.ContentModel;
 import org.alfresco.repo.copy.CopyBehaviourCallback;
 import org.alfresco.repo.copy.CopyDetails;
 import org.alfresco.repo.copy.DefaultCopyBehaviourCallback;
-import org.alfresco.repo.node.NodeServicePolicies;
 import org.alfresco.repo.node.NodeServicePolicies.OnAddAspectPolicy;
 import org.alfresco.repo.node.NodeServicePolicies.OnMoveNodePolicy;
 import org.alfresco.repo.policy.Behaviour.NotificationFrequency;
@@ -22,14 +19,18 @@ import org.alfresco.service.cmr.repository.NodeService;
 import org.alfresco.service.cmr.repository.StoreRef;
 import org.alfresco.service.namespace.NamespaceService;
 import org.alfresco.service.namespace.QName;
-import org.apache.log4j.Logger;
 import org.redpill.alfresco.numbering.component.NumberingComponent;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.util.Assert;
 
+import java.io.Serializable;
+import java.util.Map;
+
 public abstract class AbstractNumberingPolicy implements NumberingPolicy, OnAddAspectPolicy, OnMoveNodePolicy, InitializingBean {
 
-  private static final Logger LOG = Logger.getLogger(AbstractNumberingPolicy.class);
+  private static final Logger LOG = LoggerFactory.getLogger(AbstractNumberingPolicy.class);
 
   protected PolicyComponent policyComponent;
   protected NodeService nodeService;
