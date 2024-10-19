@@ -37,6 +37,12 @@
   </developers>
   <contributors>
     <contributor />
+    <contributor>
+      <name>Bhagya Silva</name>
+      <organization>Loftux AB</organization>
+      <organizationUrl>https://loftux.com</organizationUrl>
+      <timezone>+1</timezone>
+    </contributor>
   </contributors>
   <organization>
     <name>Redpill Linpro</name>
