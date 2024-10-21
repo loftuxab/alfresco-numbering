@@ -39,6 +39,8 @@ Maven repository:
 
 The jar files are also downloadable from: https://maven.redpill-linpro.com/nexus/index.html#nexus-search;quick~alfresco-numbering
 
+Examine redpill-linpro-build profile to understand the build process and how to build the artifact locally with org.redpill-linpro.alfresco.numbering groupId with additional changes.
+
 Usage
 -----
 
